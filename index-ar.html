@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فومو ديجيتال - خدمات المرور</title>
+    <style>
+        :root {
+            --primary-green: #007a53;
+            --light-mint: #e8f5f1;
+            --bg-white: #ffffff;
+            --footer-black: #000000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-white);
+            color: #333;
+        }
+
+        /* الهيدر */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-right { display: flex; align-items: center; gap: 15px; }
+        .menu-icon { font-size: 24px; cursor: pointer; color: var(--primary-green); }
+        .company-name { font-weight: 800; font-size: 1.2rem; color: #000; }
+        
+        .lang-btn {
+            background-color: #fff;
+            border: 1px solid var(--primary-green);
+            color: var(--primary-green);
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .container { padding: 20px 15px; max-width: 500px; margin: 0 auto; }
+
+        /* العنوان الرئيسي */
+        .main-title {
+            text-align: center;
+            color: var(--primary-green);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin: 20px 0 30px 0;
+            line-height: 1.4;
+        }
+
+        /* كروت الاستعلام الحيوية باللون المينت */
+        .service-card {
+            background-color: var(--light-mint);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,122,83,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,122,83,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,122,83,0.2);
+        }
+
+        .query-btn {
+            background-color: var(--primary-green);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .card-content { flex: 1; margin: 0 15px; text-align: right; }
+        .card-title { color: var(--primary-green); font-size: 1.1rem; font-weight: 800; display: block; }
+        .card-desc { color: #555; font-size: 0.85rem; margin-top: 4px; }
+
+        /* الأسئلة الشائعة */
+        .faq-section { margin-top: 40px; }
+        .faq-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; text-align: right; }
+        
+        .faq-item {
+            background: #fff;
+            border: 1px solid #eee;
+            margin-bottom: 12px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000;
+            font-size: 0.95rem;
+        }
+
+        .faq-question .plus { color: var(--primary-green); font-size: 1.4rem; }
+
+        .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fafafa; }
+        .faq-answer p { padding: 15px; margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
+
+        /* روابط السياسات مربوطة بالأسماء المتفق عليها */
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .legal-links a { color: var(--primary-green); text-decoration: none; font-size: 0.85rem; font-weight: bold; }
+
+        /* الفوتر الأسود المنظم */
+        footer {
+            background-color: var(--footer-black);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .f-disclaimer {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            border-bottom: 1px solid #222;
+            padding-bottom: 20px;
+        }
+
+        .f-info { font-size: 0.9rem; line-height: 2; }
+        .f-info .comp-name { color: #fff; display: block; font-size: 1.1rem; font-weight: bold; margin-bottom: 10px; }
+        .f-info .detail { color: #bbb; display: block; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-right">
+        <div class="menu-icon">☰</div>
+        <div class="company-name">FOMO DIGITAL</div>
+    </div>
+    <a href="index.html" class="lang-btn">English</a>
+</header>
+
+<div class="container">
+    
+    <h1 class="main-title">خدمة الاستعلام ودفع مخالفات المرور الإمارات</h1>
+
+    <a href="#" class="service-card">
+        <div class="query-btn">استعلم</div>
+        <div class="card-content">
+            <span class="card-title">الاستعلام برقم اللوحة</span>
+            <p class="card-desc">استعلام سريع عن طريق بيانات المركبة</p>
+        </div>
+    </a>
+
+    <a href="#" class="service-card">
+        <div class="query-btn">استعلم</div>
+        <div class="card-content">
+            <span class="card-title">الاستعلام بالملف المروري</span>
+            <p class="card-desc">عرض كافة المخالفات على ملفك الشخصي</p>
+        </div>
+    </a>
+
+    <a href="#" class="service-card">
+        <div class="query-btn">استعلم</div>
+        <div class="card-content">
+            <span class="card-title">الاستعلام برقم الرخصة</span>
+            <p class="card-desc">البحث عن المخالفات المسجلة على الرخصة</p>
+        </div>
+    </a>
+
+    <div class="faq-section">
+        <div class="faq-title">الأسئلة الشائعة</div>
+
+        <div class="faq-item">
+            <div class="faq-question">كيف يمكنني الاستعلام عن المخالفات؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>يمكنك الاستعلام بسهولة عبر اختيار نوع الخدمة وإدخال البيانات المطلوبة لتظهر لك النتائج فوراً.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">هل بوابة الدفع آمنة وموثوقة؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>نعم، نستخدم بوابات دفع مشفرة بمعايير عالمية لضمان أمان وحماية بياناتك بالكامل خلال عملية الدفع.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">متى يتم تحديث المخالفة في النظام بعد الدفع؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>يتم تحديث الحالة فور إتمام عملية الدفع بنجاح، وتظهر في سجلات الجهات المعنية عادةً خلال دقائق.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">هل يمكن دفع المخالفات لجميع إمارات الدولة؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>نعم، توفر المنصة إمكانية الاستعلام والدفع للمخالفات المرورية المسجلة في جميع إمارات الدولة.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">ماذا أفعل إذا لم تظهر المخالفة بعد الدفع؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>يرجى الانتظار لتحديث النظام، وفي حال استمرار المشكلة يمكنك التواصل مع الدعم الفني عبر البريد الإلكتروني.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">هل توجد رسوم إضافية لخدمة الدفع الإلكتروني؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>قد تطبق رسوم إدارية بسيطة مقابل خدمات التحصيل الإلكتروني السريع وتسهيل عمليات الدفع التقنية.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">كيف أحصل على إيصال دفع رسمي؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>بعد إتمام العملية، سيتم إرسال إيصال الدفع وتفاصيل المعاملة مباشرة إلى بريدك الإلكتروني المسجل.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">هل يمكنني الاعتراض على مخالفة مرورية عبر الموقع؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>الموقع مخصص للاستعلام والدفع فقط، أما الاعتراض فيتم عبر القنوات الرسمية للجهات المصدرة للمخالفة.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">ما هي أنواع البطاقات المقبولة للدفع؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>نقبل جميع بطاقات الائتمان والدفع المباشر (فيزا، ماستركارد) والبطاقات المحلية المعتمدة.</p></div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">هل الخدمة متاحة في أيام العطلات؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>نعم، المنصة تعمل على مدار الساعة طوال أيام الأسبوع لتقديم خدمات الاستعلام والتحصيل في أي وقت.</p></div>
+        </div>
+    </div>
+
+    <div class="legal-links">
+        <a href="privacy.html">سياسة الخصوصية</a>
+        <a href="terms.html">الشروط والأحكام</a>
+        <a href="disclaimer.html">إخلاء المسؤولية</a>
+    </div>
+</div>
+
+<footer>
+    <div class="f-disclaimer">
+        إخلاء مسؤولية: موقع فومو ديجيتال هو منصة تيسير خدمات دفع وتحصيل إلكتروني مستقلة ولا يمثل أي جهة حكومية رسمية.
+    </div>
+    
+    <div class="f-info">
+        <span class="comp-name">فومو ديجيتال موفر خدمات الدفع ش.ذ.م.م</span>
+        <span class="detail">رقم الرخصة 1320214</span>
+        <span class="detail">مكتب 128 برج خليفة الخليج التجاري دبي</span>
+        <span class="detail">صلاحية الرخصة حتى تاريخ 01-03-2027</span>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.nextElementSibling;
+            const plus = item.querySelector('.plus');
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                plus.innerText = "+";
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                plus.innerText = "−";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
