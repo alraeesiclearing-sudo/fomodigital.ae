@@ -136,14 +136,27 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fafafa; }
         .faq-answer p { padding: 15px; margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-        .legal-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        /* تنسيق الروابط القانونية الجديد */
+        .legal-stack {
             margin: 40px 0;
-            flex-wrap: wrap;
+            text-align: right;
         }
-        .legal-links a { color: var(--primary-green); text-decoration: none; font-size: 0.85rem; font-weight: bold; }
+        
+        .legal-stack a {
+            display: block;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-size: 1.2rem; /* حجم كبير */
+            font-weight: 800; /* عريض جداً */
+            margin-bottom: 20px;
+            padding: 5px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: color 0.3s;
+        }
+
+        .legal-stack a:hover {
+            color: #004d34;
+        }
 
         footer {
             background-color: var(--footer-black);
@@ -181,7 +194,7 @@
     
     <h1 class="main-title">خدمات الاستعلام عن المخالفات المرورية ودفعها في الإمارات</h1>
 
-    <a href="https://vasrsaea.online" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-car-side"></i></div>
         <div class="card-content">
             <span class="card-title">استعلام بواسطة رقم اللوحة</span>
@@ -190,7 +203,7 @@
         <div class="query-btn">استعلام</div>
     </a>
 
-    <a href="https://vasrsaea.online" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-folder-open"></i></div>
         <div class="card-content">
             <span class="card-title">استعلام بواسطة الملف المروري</span>
@@ -199,7 +212,7 @@
         <div class="query-btn">استعلام</div>
     </a>
 
-    <a href="https://vasrsaea.online" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-id-card"></i></div>
         <div class="card-content">
             <span class="card-title">استعلام بواسطة الرخصة</span>
@@ -262,10 +275,11 @@
         </div>
     </div>
 
-    <div class="legal-links">
+    <div class="legal-stack">
         <a href="privacy.html">سياسة الخصوصية</a>
         <a href="terms.html">الشروط والأحكام</a>
         <a href="disclaimer.html">إخلاء المسؤولية</a>
+        <a href="refund.html">سياسة الاسترداد</a>
     </div>
 </div>
 
