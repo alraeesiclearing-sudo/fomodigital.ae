@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فومو ديجيتال - بوابة خدمات الدفع الرقمي</title>
+    <title>فومو ديجيتال - خدمات المرور</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18160205082"></script>
     <script>
@@ -81,11 +81,15 @@
             box-shadow: 0 4px 15px rgba(0,122,83,0.1);
             transition: all 0.3s ease;
             border: 1px solid rgba(0,122,83,0.05);
-            cursor: default; /* جعل المؤشر عادي لأن الزر معطل */
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,122,83,0.2);
         }
 
         .query-btn {
-            background-color: #999; /* لون رمادي لبيان أن الزر ثابت حالياً */
+            background-color: var(--primary-green);
             color: #fff;
             padding: 10px 22px;
             border-radius: 12px;
@@ -104,9 +108,8 @@
         .card-title { color: var(--primary-green); font-size: 1.1rem; font-weight: 800; display: block; }
         .card-desc { color: #555; font-size: 0.85rem; margin-top: 4px; }
 
-        /* قسم الأسئلة الشائعة */
         .faq-section { margin-top: 40px; }
-        .faq-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; border-right: 4px solid var(--primary-green); padding-right: 10px; }
+        .faq-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; }
         
         .faq-item {
             background: #fff;
@@ -114,6 +117,7 @@
             margin-bottom: 12px;
             border-radius: 15px;
             overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
         .faq-question {
@@ -124,41 +128,22 @@
             justify-content: space-between;
             align-items: center;
             color: #000;
+            font-size: 0.95rem;
         }
+
+        .faq-question .plus { color: var(--primary-green); font-size: 1.4rem; }
 
         .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fafafa; }
-        .faq-answer p { padding: 15px; margin: 0; font-size: 0.9rem; color: #666; }
+        .faq-answer p { padding: 15px; margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-        /* قسم السياسات القانونية الجديد */
-        .legal-container {
-            margin-top: 50px;
-            padding: 25px;
-            background-color: #f9f9f9;
-            border-radius: 20px;
-            border: 1px solid #eee;
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
         }
-        .legal-container h2 {
-            font-size: 1.3rem;
-            color: #000;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .policy-box {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-        .policy-box h3 {
-            font-size: 1.1rem;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-        }
-        .policy-box p {
-            font-size: 0.9rem;
-            color: #444;
-            line-height: 1.7;
-            margin: 0;
-        }
+        .legal-links a { color: var(--primary-green); text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid var(--primary-green); padding: 8px 15px; border-radius: 10px; }
 
         footer {
             background-color: var(--footer-black);
@@ -168,11 +153,11 @@
         }
 
         .f-disclaimer {
-            font-size: 0.95rem;
-            color: #ffca28; /* لون مميز لإخلاء المسؤولية */
+            font-size: 0.9rem;
+            color: #ffca28;
             margin-bottom: 25px;
             line-height: 1.6;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #222;
             padding-bottom: 20px;
             font-weight: bold;
         }
@@ -190,84 +175,71 @@
         <div class="menu-icon">☰</div>
         <div class="company-name">فومو ديجيتال</div>
     </div>
-    <a href="javascript:void(0)" class="lang-btn">English</a>
+    <a href="index.html" class="lang-btn">English</a>
 </header>
 
 <div class="container">
     
-    <h1 class="main-title">منصة فومو ديجيتال لخدمات تسهيل الدفع والتحصيل الإلكتروني</h1>
+    <h1 class="main-title">خدمات الاستعلام عن المخالفات المرورية ودفعها في الإمارات</h1>
 
-    <a href="javascript:void(0)" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-car-side"></i></div>
         <div class="card-content">
-            <span class="card-title">الاستعلام برقم اللوحة</span>
-            <p class="card-desc">خدمة الربط لتسهيل سداد مستحقات المركبات</p>
+            <span class="card-title">استعلام بواسطة رقم اللوحة</span>
+            <p class="card-desc">فحص سريع باستخدام بيانات المركبة</p>
         </div>
-        <div class="query-btn">قريباً</div>
+        <div class="query-btn">استعلام</div>
     </a>
 
-    <a href="javascript:void(0)" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-folder-open"></i></div>
         <div class="card-content">
-            <span class="card-title">الاستعلام بالملف المروري</span>
-            <p class="card-desc">تحصيل الرسوم المسجلة على الملف الشخصي</p>
+            <span class="card-title">استعلام بواسطة الملف المروري</span>
+            <p class="card-desc">عرض جميع المخالفات على ملفك الشخصي</p>
         </div>
-        <div class="query-btn">قريباً</div>
+        <div class="query-btn">استعلام</div>
     </a>
 
-    <a href="javascript:void(0)" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-id-card"></i></div>
         <div class="card-content">
-            <span class="card-title">الاستعلام برقم الرخصة</span>
-            <p class="card-desc">عرض ومتابعة دفع الرسوم المترتبة على الرخصة</p>
+            <span class="card-title">استعلام بواسطة الرخصة</span>
+            <p class="card-desc">البحث عن المخالفات المسجلة على رخصتك</p>
         </div>
-        <div class="query-btn">قريباً</div>
+        <div class="query-btn">استعلام</div>
     </a>
 
     <div class="faq-section">
         <div class="faq-title">الأسئلة الشائعة</div>
 
         <div class="faq-item">
-            <div class="faq-question">ما هي طبيعة خدمة فومو ديجيتال؟ <span class="plus">+</span></div>
-            <div class="faq-answer"><p>نحن منصة وسيطة متخصصة في تكنولوجيا الدفع، نوفر حلولاً تقنية لتسهيل تحصيل الرسوم والمدفوعات الحكومية والخاصة عبر قنوات دفع مشفرة وآمنة.</p></div>
+            <div class="faq-question">كيف يمكنني الاستعلام عن المخالفات؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>يمكنك الاستعلام بسهولة عن طريق اختيار الخدمة المناسبة (لوحة، رخصة، أو ملف مروري) وإدخال التفاصيل المطلوبة.</p></div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">هل بياناتي المالية محمية؟ <span class="plus">+</span></div>
-            <div class="faq-answer"><p>بكل تأكيد، تعتمد فومو ديجيتال على بروتوكولات تشفير SSL عالمية، ولا يتم تخزين بيانات بطاقتك الائتمانية على خوادمنا نهائياً.</p></div>
+            <div class="faq-question">هل بوابة الدفع آمنة؟ <span class="plus">+</span></div>
+            <div class="faq-answer"><p>نعم، نستخدم تشفير SSL عالي المستوى وبوابات دفع معتمدة لضمان حماية بياناتك المالية بالكامل.</p></div>
         </div>
     </div>
 
-    <div class="legal-container">
-        <h2>السياسات والشروط القانونية</h2>
-        
-        <div class="policy-box">
-            <h3>سياسة الخصوصية</h3>
-            <p>تلتزم فومو ديجيتال بحماية خصوصيتك. نقوم بجمع البيانات اللازمة فقط لإتمام عملية التحصيل، ونلتزم بعدم مشاركتها مع أي أطراف ثالثة خارج نطاق بوابات الدفع الرسمية.</p>
-        </div>
-
-        <div class="policy-box">
-            <h3>الشروط والأحكام</h3>
-            <p>باستخدامك لهذه المنصة، تقر بأنك المالك القانوني للبيانات المدخلة. نحن نوفر واجهة تقنية للربط مع أنظمة التحصيل، وتعتبر عملية الدفع نهائية بمجرد تأكيدها من بوابة البنك.</p>
-        </div>
-
-        <div class="policy-box">
-            <h3>سياسة الاسترداد</h3>
-            <p>يتم التعامل مع طلبات الاسترداد وفقاً لسياسة الجهة المستفيدة من التحصيل. في حال وجود خطأ تقني في عملية الدفع، يرجى التواصل مع فريق الدعم الفني لدينا خلال 24 ساعة.</p>
-        </div>
+    <div class="legal-links">
+        <a href="privacy.html">سياسة الخصوصية</a>
+        <a href="terms.html">الشروط والأحكام</a>
+        <a href="disclaimer.html">إخلاء المسؤولية</a>
     </div>
 </div>
 
 <footer>
     <div class="f-disclaimer">
-        إخلاء مسؤولية قانوني: شركة فومو ديجيتال (FOMO DIGITAL) هي شركة خاصة لخدمات تكنولوجيا الدفع والتحصيل، وهي منصة مستقلة تماماً. نحن لا نمثل أي جهة حكومية رسمية في دولة الإمارات، وعملنا يقتصر على توفير الوساطة التقنية لتسهيل عمليات الدفع للمستخدمين.
+        إخلاء مسؤولية: فومو ديجيتال هي منصة دفع وتحصيل إلكتروني مستقلة (وسيط تقني) ولا تمثل أي جهة حكومية رسمية.
     </div>
     
     <div class="f-info">
         <span class="comp-name">FOMO DIGITAL PAYMENT SERVICES PROVIDER L.L.C</span>
-        <span class="detail">رقم رخصة الأعمال: 1320214</span>
-        <span class="detail">العنوان: مكتب 128، برج خليفة، الخليج التجاري، دبي، الإمارات العربية المتحدة</span>
-        <span class="detail">تاريخ انتهاء الرخصة: 01-03-2027</span>
+        <span class="detail">رقم الرخصة 1320214</span>
+        <span class="detail">مكتب 128 برج خليفة الخليج التجاري دبي</span>
+        <span class="detail">الرخصة صالحة حتى 01-03-2027</span>
     </div>
 </footer>
 
