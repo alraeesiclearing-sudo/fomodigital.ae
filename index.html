@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOMO DIGITAL - Digital Payment Gateway</title>
+    <title>FOMO DIGITAL - Traffic Services</title>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18160205082"></script>
     <script>
@@ -81,11 +81,15 @@
             box-shadow: 0 4px 15px rgba(0,122,83,0.1);
             transition: all 0.3s ease;
             border: 1px solid rgba(0,122,83,0.05);
-            cursor: default;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,122,83,0.2);
         }
 
         .query-btn {
-            background-color: #999;
+            background-color: var(--primary-green);
             color: #fff;
             padding: 10px 22px;
             border-radius: 12px;
@@ -105,7 +109,7 @@
         .card-desc { color: #555; font-size: 0.85rem; margin-top: 4px; }
 
         .faq-section { margin-top: 40px; }
-        .faq-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--primary-green); padding-left: 10px;}
+        .faq-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; }
         
         .faq-item {
             background: #fff;
@@ -113,6 +117,7 @@
             margin-bottom: 12px;
             border-radius: 15px;
             overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
         .faq-question {
@@ -123,41 +128,22 @@
             justify-content: space-between;
             align-items: center;
             color: #000;
+            font-size: 0.95rem;
         }
+
+        .faq-question .plus { color: var(--primary-green); font-size: 1.4rem; }
 
         .faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; background: #fafafa; }
-        .faq-answer p { padding: 15px; margin: 0; font-size: 0.9rem; color: #666; }
+        .faq-answer p { padding: 15px; margin: 0; font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-        /* Legal Policies Container */
-        .legal-container {
-            margin-top: 50px;
-            padding: 25px;
-            background-color: #f9f9f9;
-            border-radius: 20px;
-            border: 1px solid #eee;
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
         }
-        .legal-container h2 {
-            font-size: 1.3rem;
-            color: #000;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .policy-box {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-        .policy-box h3 {
-            font-size: 1.1rem;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-        }
-        .policy-box p {
-            font-size: 0.9rem;
-            color: #444;
-            line-height: 1.7;
-            margin: 0;
-        }
+        .legal-links a { color: var(--primary-green); text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid var(--primary-green); padding: 8px 15px; border-radius: 10px; }
 
         footer {
             background-color: var(--footer-black);
@@ -167,11 +153,11 @@
         }
 
         .f-disclaimer {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #ffca28;
             margin-bottom: 25px;
             line-height: 1.6;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #222;
             padding-bottom: 20px;
             font-weight: bold;
         }
@@ -189,84 +175,71 @@
         <div class="menu-icon">☰</div>
         <div class="company-name">FOMO DIGITAL</div>
     </div>
-    <a href="javascript:void(0)" class="lang-btn">العربية</a>
+    <a href="index-ar.html" class="lang-btn">العربية</a>
 </header>
 
 <div class="container">
     
-    <h1 class="main-title">FOMO DIGITAL Platform for Electronic Collection & Payment Facilitation</h1>
+    <h1 class="main-title">UAE Traffic Fine Inquiry & Payment Services</h1>
 
-    <a href="javascript:void(0)" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-car-side"></i></div>
         <div class="card-content">
             <span class="card-title">Inquiry by Plate Number</span>
-            <p class="card-desc">Integration service to facilitate vehicle payments</p>
+            <p class="card-desc">Quick check using vehicle details</p>
         </div>
-        <div class="query-btn">Soon</div>
+        <div class="query-btn">Inquiry</div>
     </a>
 
-    <a href="javascript:void(0)" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-folder-open"></i></div>
         <div class="card-content">
             <span class="card-title">Inquiry by Traffic File</span>
-            <p class="card-desc">Collection of fees registered on your personal file</p>
+            <p class="card-desc">View all fines on your personal file</p>
         </div>
-        <div class="query-btn">Soon</div>
+        <div class="query-btn">Inquiry</div>
     </a>
 
-    <a href="javascript:void(0)" class="service-card">
+    <a href="#" class="service-card">
         <div class="service-icon"><i class="fas fa-id-card"></i></div>
         <div class="card-content">
             <span class="card-title">Inquiry by License</span>
-            <p class="card-desc">Track and pay fees associated with your license</p>
+            <p class="card-desc">Search for fines registered on your license</p>
         </div>
-        <div class="query-btn">Soon</div>
+        <div class="query-btn">Inquiry</div>
     </a>
 
     <div class="faq-section">
         <div class="faq-title">Frequently Asked Questions</div>
 
         <div class="faq-item">
-            <div class="faq-question">What is the nature of FOMO DIGITAL services? <span class="plus">+</span></div>
-            <div class="faq-answer"><p>We are a specialized payment technology platform providing technical solutions to facilitate the collection of government and private fees through encrypted and secure payment channels.</p></div>
+            <div class="faq-question">How can I inquire about traffic fines? <span class="plus">+</span></div>
+            <div class="faq-answer"><p>You can easily inquire by selecting the appropriate service (Plate, License, or Traffic File) and entering the required details.</p></div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question">Is my financial data protected? <span class="plus">+</span></div>
-            <div class="faq-answer"><p>Absolutely. FOMO DIGITAL utilizes global SSL encryption protocols, and your credit card data is never stored on our servers.</p></div>
+            <div class="faq-question">Is the payment portal safe and secure? <span class="plus">+</span></div>
+            <div class="faq-answer"><p>Yes, we use high-level SSL encryption and certified payment gateways to ensure your financial data is fully protected.</p></div>
         </div>
-    </div>
-
-    <div class="legal-container">
-        <h2>Legal Policies & Terms</h2>
-        
-        <div class="policy-box">
-            <h3>Privacy Policy</h3>
-            <p>FOMO DIGITAL is committed to protecting your privacy. We only collect the data necessary to complete the collection process and commit to not sharing it with any third parties outside the scope of official payment gateways.</p>
         </div>
 
-        <div class="policy-box">
-            <h3>Terms & Conditions</h3>
-            <p>By using this platform, you acknowledge that you are the legal owner of the data entered. We provide a technical interface for integration with collection systems, and the payment process is considered final once confirmed by the bank gateway.</p>
-        </div>
-
-        <div class="policy-box">
-            <h3>Refund Policy</h3>
-            <p>Refund requests are handled in accordance with the policy of the entity benefiting from the collection. In case of a technical error in the payment process, please contact our technical support within 24 hours.</p>
-        </div>
+    <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="disclaimer.html">Disclaimer</a>
     </div>
 </div>
 
 <footer>
     <div class="f-disclaimer">
-        Legal Disclaimer: FOMO DIGITAL is a private company providing payment technology and collection services. We are a completely independent platform and do not represent any official government entity in the UAE. Our role is limited to providing technical mediation to facilitate payment processes for users.
+        Disclaimer: FOMO DIGITAL is an independent electronic payment and collection platform (technical intermediary) and does not represent official government entities.
     </div>
     
     <div class="f-info">
         <span class="comp-name">FOMO DIGITAL PAYMENT SERVICES PROVIDER L.L.C</span>
-        <span class="detail">Business License Number: 1320214</span>
-        <span class="detail">Address: Office 128, Burj Khalifa, Business Bay, Dubai, United Arab Emirates</span>
-        <span class="detail">License Expiry: 01-03-2027</span>
+        <span class="detail">License Number 1320214</span>
+        <span class="detail">Office 128 Burj Khalifa Business Bay Dubai</span>
+        <span class="detail">License valid until 01-03-2027</span>
     </div>
 </footer>
 
